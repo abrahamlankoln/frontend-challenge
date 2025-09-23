@@ -3,13 +3,35 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
+
+ 
+
 function App() {
+   
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
   return (
     <>
-      <header></header>
+      <header>
+        <div className='name'>
+          <span>----------İbrahim ŞİMŞEK</span>
+        </div>
+        <div className='darkmode'>
+          <div className='darkmodebutton'>
+                <label className="switch">
+              <input type="checkbox" checked={darkMode} onChange={toggleDarkMode} />
+              <span className="slider round"></span>
+            </label>
+          </div>
+          <div className='aboutme'></div>
+        </div>
+      </header>
 
       <section className="main">
-        <span>İbrahim ŞİMŞEK</span>
+
         <h1>Create thinker Minimalism lover</h1>
         <p>
           Hi, I'm İbrahim. I'm a full-stack developer. If you are looking for a Developer who
@@ -58,7 +80,17 @@ function App() {
       <section className="Profile">
         <h2>Profile</h2>
         <div className="item">
-          
+          <div className='item-content'>
+            <h3>Profile</h3>
+            <span>Doğum tarihi 07.06.1996</span>
+            <span>İkamet Şehri  Balıkesir</span>
+            <span>Eğitim Durumu  Uludağ Ünv. EEM</span>
+            <span>Tercih Ettiği Rol fullstack developer</span>
+          </div>
+          <div className='item-content'>
+            <h3>About Me</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
         </div>
       </section>
 
